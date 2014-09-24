@@ -15,19 +15,21 @@ parser.add_argument("-t", "--titre", help="titre voulu dans la playlist")
 
 args = parser.parse_args()
 
+def verifPourcentage(arg):
+    return int(arg)
+
 print (args.temps)
 print (args.nomfichier)
 print (args.formatfichier)
 
 if args.genre:
-    print (args.genre)
+    verifPourcentage(args.genre[1])
+    print(args.genre)
 if args.sousgenre:
-    print (args.sousgenre)
+    print(args.sousgenre)
 if args.artiste:
-    print (args.artiste)
+    print(args.artiste)
 if args.album:
-    print (args.album)
+    print(args.album)
 if args.titre:
-    print (args.titre)
-
-print (args.genre[1])
+    print(args.titre)
