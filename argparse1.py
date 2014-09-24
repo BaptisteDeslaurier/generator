@@ -17,14 +17,30 @@ args = parser.parse_args()
 
 def verifPourcentage(arg):
     try:
-        return int(arg)
+        pct=int(arg)
+        if (verifPositif(pct) == False):
+            print ("Le pourcentage doit être positive !")
+        elif (verifInfCent(pct) == False):
+            print ("Le pourcentage doit être inférieur à 100 !")
+        else:
+            return pct
     except ValueError:
-        print (arg + " n'est pas un entier !")
+        print (pct + " n'est pas un entier !")
+        exit(1)
+
+def verifPositif(pct):
+    if pct > 0:
+        return True
+    else:
+        return False
+
+def verifInfCent(pct):
+    if pct < 100:
+        return True
+    else:
+        return False
 
 verifPourcentage(args.genre[1])
-verifPourcentage(args.sousgenre[1])
-verifPourcentage(args.artiste[1])
-
 
 """
 print (args.temps)
