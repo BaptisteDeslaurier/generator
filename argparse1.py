@@ -62,6 +62,7 @@ if args.artiste:
 
 
 '''Affichage'''
+print("Test")
 print("Création de la playlist " + (args.nomfichier) + "." + (args.formatfichier) + " d'une durée de " + str(args.temps) + " minutes")
 if args.genre:
     print("La playlist contient " + str(args.genre[1]) + "% du genre " + (args.genre[0]))
