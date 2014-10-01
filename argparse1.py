@@ -1,9 +1,12 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import argparse
 import logging
 logging.basicConfig(filename="monLog.log", level=logging.DEBUG)
 parser = argparse.ArgumentParser()
 
-logging.info("Démarrage du programme")
+logging.info("***** Démarrage du programme *****")
 
 '''argument positionnel'''
 parser.add_argument("temps", help="durer de la playlist en minute", type=int)
@@ -24,40 +27,24 @@ args = parser.parse_args()
 def verifPourcentage(arg):
     try:
         pct=int(arg)
-        if (verifPositif(pct) == False):
-            print ("Le pourcentage doit être positive !")
-            logging.error("le pourcentage " + arg + " n'est pas un pourcentage positif")
-            exit(1)
-        elif (verifInfCent(pct) == False):
-            print ("Le pourcentage doit être inférieur à 100 !")
-            logging.error("le pourcentage " + arg + " n'est pas un pourcentage valide (supérieur à 100)")
-            exit(1)
-        else:
-            return pct
+        if pct<0:
+            pct = abs(pct)
+            logging.warning('La quantité saisie doit etre positive')
+            logging.info('Nombre négatif transformé en positif: ' + str(pct))
+        elif pct>100:
+            pct = None
+            logging.warning('La quantité saisie est supérieur à 100')
+            logging.info('Nombre supérieur à 100 transformé en : ' + str(pct))
+        return True
     except ValueError:
-        print (pct + " n'est pas un entier !")
+        logging.error('Impossible de convertir ' + arg + ' en nombre entier !')
+        logging.info("***** Fin du programme *****")
         exit(1)
 
-
-'''Fonction qui vérifie que le pourcentage est positif'''
-def verifPositif(pct):
-    if pct > 0:
-        return True
-    else:
-        return False
-
-
-'''Fonction qui vérifie que le pourcentage est inférieur à 100'''
-def verifInfCent(pct):
-    if pct <= 100:
-        return True
-    else:
-        return False
-
-
+'''Vérifications'''
 '''Vérification d'un temps positif'''
 logging.info("Utilisation de la fonction pour vérifier que le temps est un entier positif")
-if verifPositif(args.temps) == False :
+if args.temps<0 :
     print ("Le temps doit être positive !")
     logging.error("le temps " + str(args.temps) + " n'est pas un entier positif")
     exit(1)
@@ -76,7 +63,7 @@ if args.artiste:
     verifPourcentage(args.artiste[1])
 
 
-'''Affichage'''
+'''Affichage
 print("Création de la playlist " + (args.nomfichier) + "." + (args.formatfichier) + " d'une durée de " + str(args.temps) + " minutes")
 if args.genre:
     print("La playlist contient " + str(args.genre[1]) + "% du genre " + (args.genre[0]))
@@ -87,4 +74,7 @@ if args.artiste:
 if args.album:
     print("La playlist contient l'album " + (args.album))
 if args.titre:
-    print("La playlist contient le titre " + (args.titre))
+    print("La playlist contient le titre " + (args.titre))'''
+
+logging.info("Tout est bon !!!")
+logging.info("***** Fin du programme *****")
