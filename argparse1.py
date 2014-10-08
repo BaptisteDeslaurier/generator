@@ -84,19 +84,6 @@ if args.temps<0 :
     logging.error("le temps " + str(args.temps) + " n'est pas un entier positif")
     exit(1)
 
-'''
-if args.genre:
-    gestionPctage(args.genre)
-
-
-if args.sousgenre:
-    logging.info("Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100")
-    gestionPctage(args.sousgenre)
-
-if args.artiste:
-    logging.info("Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100")
-    gestionPctage(args.artiste)
-'''
 
 for unArg in ['genre','sousgenre','artiste','album', 'titre']:
     '''Si l'argument est renseigné'''
