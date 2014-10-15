@@ -1,0 +1,56 @@
+INFO:root:***** Démarrage du programme *****
+INFO:root:Utilisation de la fonction pour vérifier que le temps est un entier positif
+INFO:root:Saisies : Namespace(album=None, artiste=None, formatfichier='pls', genre=[['rap', '15'], ['rock', '45']], nomfichier='aaa', sousgenre=None, temps=120, titre=None)
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Total des sommes des %: 60
+INFO:root:Tout est bon !!!
+INFO:root:***** Fin du programme *****
+INFO:root:***** Démarrage du programme *****
+INFO:root:Utilisation de la fonction pour vérifier que le temps est un entier positif
+INFO:root:Saisies : Namespace(album=None, artiste=None, formatfichier='pls', genre=[['rap', '15'], ['rock', '-95']], nomfichier='aaa', sousgenre=None, temps=120, titre=None)
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+WARNING:root:La quantité saisie doit etre positive
+INFO:root:Nombre négatif transformé en positif: 95
+INFO:root:Total des sommes des %: -80
+INFO:root:Tout est bon !!!
+INFO:root:***** Fin du programme *****
+INFO:root:***** Démarrage du programme *****
+INFO:root:Utilisation de la fonction pour vérifier que le temps est un entier positif
+INFO:root:Saisies : Namespace(album=None, artiste=None, formatfichier='pls', genre=[['rap', '15'], ['rock', '-95']], nomfichier='aaa', sousgenre=None, temps=120, titre=None)
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+WARNING:root:La quantité saisie doit etre positive
+INFO:root:Nombre négatif transformé en positif: 95
+INFO:root:Total des sommes des %: 110
+INFO:root:Remise du total des % à 100 grace à la proportionalité
+INFO:root:Tout est bon !!!
+INFO:root:***** Fin du programme *****
+INFO:root:***** Démarrage du programme *****
+INFO:root:Utilisation de la fonction pour vérifier que le temps est un entier positif
+INFO:root:Saisies : Namespace(album=None, artiste=None, formatfichier='pls', genre=[['rap', '15'], ['rock', '-95']], nomfichier='aaa', sousgenre=None, temps=120, titre=None)
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+WARNING:root:La quantité saisie doit etre positive
+INFO:root:Nombre négatif transformé en positif: 95
+INFO:root:Total des sommes des %: 110
+INFO:root:Remise du total des % à 100 grace à la proportionalité
+INFO:root:Tout est bon !!!
+INFO:root:***** Fin du programme *****
+INFO:root:***** Démarrage du programme *****
+INFO:root:Utilisation de la fonction pour vérifier que le temps est un entier positif
+INFO:root:Saisies : Namespace(album=None, artiste=None, formatfichier='pls', genre=[['rap', '15'], ['rock', '-95']], nomfichier='aaa', sousgenre=None, temps=120, titre=None)
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+INFO:root:Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100
+WARNING:root:La quantité saisie doit etre positive
+INFO:root:Nombre négatif transformé en positif: 95
+INFO:root:Total des sommes des %: 110
+INFO:root:Remise du total des % à 100 grace à la proportionalité
+INFO:root:Tout est bon !!!
+INFO:root:***** Fin du programme *****

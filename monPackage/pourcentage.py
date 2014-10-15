@@ -17,6 +17,7 @@ def verifPourcentage(arg):
             pct = None
             logging.warning('La quantité saisie est supérieur à 100')
             logging.info('Nombre supérieur à 100 transformé en : ' + str(pct))
+        return pct
     except ValueError:
         logging.error('Impossible de convertir ' + arg + ' en nombre entier !')
         logging.info("***** Fin du programme *****")
@@ -35,8 +36,8 @@ def gestionPctage(typeArg):
     while ligneList <= len(typeArg):
         logging.info("Utilisation de la fonction pour vérifier que le pourcentage est entre 0 et 100")
         '''Vérification du %'''
-        verifPourcentage(typeArg[i][1])
-        somme = somme + int(typeArg[i][1])
+        typeArg[i][1] = verifPourcentage(typeArg[i][1])
+        somme = somme + typeArg[i][1]
         ligneList = ligneList + 1
         i = i + 1
     logging.info('Total des sommes des %: ' + str(somme))
@@ -46,5 +47,6 @@ def gestionPctage(typeArg):
         while ligneList2 <= len(typeArg):
             '''Round() permet d'arrondir à l'entier le plus proche'''
             typeArg[j][1] = round(int(typeArg[j][1])*100/somme)
+            print(str(typeArg[j][1]))
             j = j + 1
             ligneList2 = ligneList2 + 1

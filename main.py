@@ -18,6 +18,7 @@ if args.temps<0 :
     logging.error("le temps " + str(args.temps) + " n'est pas un entier positif")
     exit(1)
 
+logging.info("Saisies : " + str(args))
 
 for unArg in ['genre','sousgenre','artiste','album', 'titre']:
     '''Si l'argument est renseigné'''
@@ -26,6 +27,7 @@ for unArg in ['genre','sousgenre','artiste','album', 'titre']:
         gestionPctage(getattr(args, unArg))
 
 print("Good job team")
+
 
 logging.info("Tout est bon !!!")
 logging.info("***** Fin du programme *****")
